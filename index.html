@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Priyanka Singh — PhD candidate in Informatics at the University of Iowa, working at the intersection of machine learning, bioinformatics, and health research.">
+  <meta name="theme-color" content="#101721">
+  <meta property="og:title" content="Priyanka Singh · AI × Biology">
+  <meta property="og:description" content="Making biology computable! Research, scientific works, and a little curiosity.">
+  <title>Priyanka Singh · Making biology computable!</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script>try{document.documentElement.dataset.theme=localStorage.getItem('ps-theme')||'dark'}catch(e){}</script>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#portfolio">Skip to portfolio</a>
+  <header class="topbar">
+    <div class="container top-inner">
+      <a href="#home" class="logo" aria-label="Priyanka Singh, home">priyanka<span>✳</span>singh</a>
+      <nav class="top-links" aria-label="Main navigation">
+        <button type="button" data-open="about">About</button>
+        <button type="button" data-open="research">Research</button>
+        <button type="button" data-open="works">Scientific works</button>
+        <button type="button" data-open="contact">Contact</button>
+      </nav>
+      <button class="theme-toggle" type="button" id="theme-toggle" aria-label="Switch to light mode" title="Toggle light/dark mode"><span class="theme-icon" aria-hidden="true">☀</span><span class="theme-label">Light mode</span></button>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="hero container" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="pulse" aria-hidden="true"></span> PhD researcher · University of Iowa</div>
+        <h1 id="hero-title">Making biology <em>computable!</em></h1>
+        <p class="lead">Hi, I am Priyanka Singh, a PhD candidate developing machine-learning and bioinformatics approaches to understand antimicrobial resistance, microbiomes, and clinical data.</p>
+        <div class="hero-actions">
+          <button type="button" class="button primary" data-open="research">Explore my research <span aria-hidden="true">↗</span></button>
+          <button type="button" class="button subtle" data-open="about">About me <span aria-hidden="true">↗</span></button>
+        </div>
+        <div class="hero-bottom"><span class="tiny-star" aria-hidden="true">✳</span> Curious about biology. Thoughtful about data.</div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="orbit orbit-1"></div><div class="orbit orbit-2"></div><div class="orbit orbit-3"></div>
+        <svg viewBox="0 0 470 490" class="science-art" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs><linearGradient id="geneGrad" x1="0" x2="1"><stop stop-color="#9de8c6"/><stop offset="1" stop-color="#a5c0fa"/></linearGradient></defs>
+          <g class="helix" stroke="url(#geneGrad)" stroke-width="7" stroke-linecap="round"><path d="M180 70 C360 130 115 200 310 265 S120 376 287 423"/><path d="M300 70 C125 130 360 200 180 265 S348 376 192 423"/></g>
+          <g stroke="#a2cec6" stroke-width="3" opacity=".7"><path d="M207 83h70M222 117h37M207 151h70M195 187h97M208 226h70M204 265h80M197 303h94M218 343h51M204 383h72M213 415h57"/></g>
+          <g class="float-a"><ellipse cx="95" cy="130" rx="48" ry="32" fill="#b4e8d2" transform="rotate(-26 95 130)"/><path d="M47 106l-17 -10M140 149l18 8M94 91l-3 -18M101 165l-1 18" stroke="#b4e8d2" stroke-width="6" stroke-linecap="round"/><circle cx="80" cy="125" r="3" fill="#275f5c"/><circle cx="106" cy="137" r="3" fill="#275f5c"/></g>
+          <g class="float-b" stroke="#f5bbd0" stroke-width="3"><path d="M354 116l53 38-25 58-62-29z" fill="#353851"/><circle cx="354" cy="116" r="8" fill="#f5bbd0"/><circle cx="407" cy="154" r="8" fill="#f5bbd0"/><circle cx="382" cy="212" r="8" fill="#f5bbd0"/><circle cx="320" cy="183" r="8" fill="#f5bbd0"/></g>
+          <path d="M90 325l7 16 16 7-16 7-7 16-7-16-16-7 16-7z" fill="#ffdeaa"/><path d="M405 311l5 12 12 5-12 5-5 12-5-12-12-5 12-5z" fill="#ffdeaa"/>
+        </svg>
+        <span class="floating-tag tag1">bioinformatics</span><span class="floating-tag tag2">machine learning</span><span class="floating-tag tag3">curiosity ✦</span>
+      </div>
+    </section>
+
+    <section class="portfolio container" id="portfolio" aria-labelledby="portfolio-heading">
+      <div class="section-intro"><div class="eyebrow muted">A little tour</div><h2 id="portfolio-heading">Explore, at your own pace<span class="accent">.</span></h2><p>Pick what interests you. Only one section opens at a time, so you can focus on the story you want to read.</p></div>
+      <div class="section-grid" role="group" aria-label="Explore portfolio sections">
+        <button class="section-card" data-open="about" type="button" aria-expanded="false" aria-controls="panel-about"><span class="card-top"><span>01 / About me</span><span class="card-arrow" aria-hidden="true">↗</span></span><span class="card-graphic">✺ <span class="little-orbit">✧</span></span><span class="card-title">The person behind the research</span><span class="card-sub">Background, motivation, and my journey.</span></button>
+        <button class="section-card" data-open="research" type="button" aria-expanded="false" aria-controls="panel-research"><span class="card-top"><span>02 / Research</span><span class="card-arrow" aria-hidden="true">↗</span></span><span class="card-graphic"><span class="dna-emoji">⌁</span> ✳</span><span class="card-title">Questions worth exploring</span><span class="card-sub">A high-level look at the ideas driving my work.</span></button>
+        <button class="section-card" data-open="works" type="button" aria-expanded="false" aria-controls="panel-works"><span class="card-top"><span>03 / Scientific works</span><span class="card-arrow" aria-hidden="true">↗</span></span><span class="card-graphic">◈ <span class="little-orbit">✦</span></span><span class="card-title">Publications & presentations</span><span class="card-sub">Selected public research and conference contributions.</span></button>
+        <button class="section-card" data-open="recognition" type="button" aria-expanded="false" aria-controls="panel-recognition"><span class="card-top"><span>04 / Recognition</span><span class="card-arrow" aria-hidden="true">↗</span></span><span class="card-graphic">✷</span><span class="card-title">Milestones along the way</span><span class="card-sub">Awards, fellowships, and highlights.</span></button>
+        <button class="section-card" data-open="journey" type="button" aria-expanded="false" aria-controls="panel-journey"><span class="card-top"><span>05 / Journey</span><span class="card-arrow" aria-hidden="true">↗</span></span><span class="card-graphic">⌘ <span class="little-orbit">•</span></span><span class="card-title">From data to discovery</span><span class="card-sub">Education, experience, and leadership.</span></button>
+        <button class="section-card" data-open="toolkit" type="button" aria-expanded="false" aria-controls="panel-toolkit"><span class="card-top"><span>06 / Toolkit</span><span class="card-arrow" aria-hidden="true">↗</span></span><span class="card-graphic">{ } <span class="little-orbit">✧</span></span><span class="card-title">How I build things</span><span class="card-sub">Programming, computational methods, and tools.</span></button>
+        <button class="section-card" data-open="hobbies" type="button" aria-expanded="false" aria-controls="panel-hobbies"><span class="card-top"><span>07 / Beyond the lab</span><span class="card-arrow" aria-hidden="true">↗</span></span><span class="card-graphic">♫ <span class="little-orbit">✿</span></span><span class="card-title">Little things I love</span><span class="card-sub">Birdwatching, dancing, and music.</span></button>
+        <button class="section-card" data-open="contact" type="button" aria-expanded="false" aria-controls="panel-contact"><span class="card-top"><span>08 / Contact</span><span class="card-arrow" aria-hidden="true">↗</span></span><span class="card-graphic">✉ <span class="little-orbit">✳</span></span><span class="card-title">Say hello</span><span class="card-sub">Ideas, conversations, and collaborations.</span></button>
+      </div>
+
+      <div class="detail-region" id="detail-region" tabindex="-1" aria-live="off">
+        <section id="panel-about" class="detail-panel" data-panel="about" hidden aria-labelledby="title-about">
+          <div class="panel-head"><span class="eyebrow">01 / About me</span><button type="button" class="panel-close" aria-label="Close About me">Close <span aria-hidden="true">×</span></button></div>
+          <h2 id="title-about">A curious mind at the intersection of <em>biology and computation.</em></h2>
+          <div class="two-col"><div><p class="big-copy">I am a PhD candidate in Informatics at the University of Iowa, working with Dr. Erliang Zeng in the College of Dentistry. I care about making complex biological information more useful, understandable, and trustworthy.</p><p>Before my doctoral research, I worked as a Senior Biocurator at Elucidata. My training began in biotechnology, where I earned a master's degree and graduated as a university gold medalist.</p><p>I'm especially drawn to research that bridges disciplines, invites collaboration, and turns carefully analyzed data into questions worth asking next.</p></div><div class="side-note"><span class="note-icon">✺</span><h3>What motivates me</h3><p>Thoughtful computational tools should help researchers see biological systems more clearly—not just generate predictions.</p><div class="mini-tags"><span>AI for health</span><span>Microbiomes</span><span>Genomics</span><span>Collaboration</span></div></div></div>
+        </section>
+
+        <section id="panel-research" class="detail-panel" data-panel="research" hidden aria-labelledby="title-research">
+          <div class="panel-head"><span class="eyebrow">02 / Research</span><button type="button" class="panel-close" aria-label="Close Research">Close <span aria-hidden="true">×</span></button></div>
+          <h2 id="title-research">Big biological questions. <em>Careful computational answers.</em></h2>
+          <p class="panel-lead">My work spans genomic prediction, microbiome research, and clinical informatics. Ongoing work is intentionally described at a high level.</p>
+          <div class="topic-controls" role="group" aria-label="Filter research interests"><button class="topic active" data-filter="all" aria-pressed="true">All themes</button><button class="topic" data-filter="genomics" aria-pressed="false">Genomics</button><button class="topic" data-filter="microbiome" aria-pressed="false">Microbiome</button><button class="topic" data-filter="clinical" aria-pressed="false">Clinical AI</button><button class="topic" data-filter="multiomics" aria-pressed="false">Multi-omics</button></div>
+          <div class="research-cards">
+            <details class="research-card" data-topic="genomics"><summary><span class="topic-symbol">⌁</span><span class="research-label">Genomics & machine learning</span><strong>Antimicrobial resistance prediction</strong><span class="expand-hint">Explore <span aria-hidden="true">+</span></span></summary><div class="research-body"><p>Exploring how computational representations of bacterial genomes and machine-learning methods can support more robust antimicrobial resistance prediction.</p><p class="subtext">Public highlight: top-two placements on three CAMDA 2026 AMR Challenge leaderboards.</p></div></details>
+            <details class="research-card" data-topic="microbiome"><summary><span class="topic-symbol">✿</span><span class="research-label">Microbiome methods</span><strong>MiNDSET</strong><span class="expand-hint">Explore <span aria-hidden="true">+</span></span></summary><div class="research-body"><p>A computational framework for helping researchers compare normalization and differential-abundance strategies in microbiome studies.</p></div></details>
+            <details class="research-card" data-topic="clinical"><summary><span class="topic-symbol">✧</span><span class="research-label">Clinical AI</span><strong>Linking fragmented health information</strong><span class="expand-hint">Explore <span aria-hidden="true">+</span></span></summary><div class="research-body"><p>Investigating ways biomedical language models can support comparisons across clinical data systems while respecting differences in terminology and context.</p></div></details>
+            <details class="research-card" data-topic="microbiome"><summary><span class="topic-symbol">◉</span><span class="research-label">Oral microbiome</span><strong>Microbial activity in health and disease</strong><span class="expand-hint">Explore <span aria-hidden="true">+</span></span></summary><div class="research-body"><p>Studying microbial community activity across oral health and disease through computational analysis and cross-study comparisons.</p></div></details>
+            <details class="research-card" data-topic="multiomics"><summary><span class="topic-symbol">✳</span><span class="research-label">Multi-omics</span><strong>MOMENTUM</strong><span class="expand-hint">Explore <span aria-hidden="true">+</span></span></summary><div class="research-body"><p>Contributing to reusable workflows for integrating and comparing multi-omics data in microbiome research.</p></div></details>
+          </div>
+          <p class="quiet-note">Some projects are ongoing or in manuscript preparation; methodological specifics and unpublished findings are intentionally not shared here.</p>
+        </section>
+
+        <section id="panel-works" class="detail-panel" data-panel="works" hidden aria-labelledby="title-works">
+          <div class="panel-head"><span class="eyebrow">03 / Scientific works</span><button type="button" class="panel-close" aria-label="Close Scientific works">Close <span aria-hidden="true">×</span></button></div>
+          <h2 id="title-works">Science is a <em>shared conversation.</em></h2>
+          <p class="panel-lead">Selected publications, preprints, and scientific presentations that are already public.</p>
+          <div class="work-list">
+            <a class="work-item" href="https://doi.org/10.64898/2026.01.12.698643" target="_blank" rel="noopener noreferrer"><span class="work-date">2026 · Preprint</span><span><strong>New paradigm of CRISPR spacerome for classification of global <i>Escherichia coli</i> lineages</strong><small>Shin H., Rajaram S. V., Singh P., et al. · bioRxiv</small></span><span aria-hidden="true">↗</span></a>
+            <a class="work-item" href="https://doi.org/10.1101/2025.08.07.669164" target="_blank" rel="noopener noreferrer"><span class="work-date">2025 · Preprint</span><span><strong>Metatranscriptomic analysis reveals toxin-antitoxin system shifts in caries-associated oral microbiomes</strong><small>Rajaram S. V., Singh P., Zeng E. · bioRxiv</small></span><span aria-hidden="true">↗</span></a>
+            <a class="work-item" href="https://doi.org/10.30954/23195169.01.2020.3" target="_blank" rel="noopener noreferrer"><span class="work-date">2020 · Journal</span><span><strong>Identification of stress-induced plant microRNAs and their targets from <i>Rhizophora apiculata</i></strong><small>Singh P. et al. · International Journal of Bioinformatics and Biological Science</small></span><span aria-hidden="true">↗</span></a>
+            <div class="work-item"><span class="work-date">2026 · CAMDA / ISMB</span><span><strong>Multi-scale k-mer modeling and BEAR-based feature selection for antimicrobial resistance prediction</strong><small>Poster presentation · Washington, DC</small></span><span aria-hidden="true">✦</span></div>
+            <div class="work-item"><span class="work-date">2026 · Iowa AADOCR</span><span><strong>MiNDSET: A modular framework to identify optimal normalization and differential abundance strategies</strong><small>Oral presentation · Iowa City</small></span><span aria-hidden="true">✦</span></div>
+            <div class="work-item"><span class="work-date">2024 · Conferences</span><span><strong>Oral microbiome and normalization methods</strong><small>Poster presentations · ASM NGS and IADR/AADOCR/CADR</small></span><span aria-hidden="true">✦</span></div>
+          </div>
+        </section>
+
+        <section id="panel-recognition" class="detail-panel" data-panel="recognition" hidden aria-labelledby="title-recognition">
+          <div class="panel-head"><span class="eyebrow">04 / Recognition</span><button type="button" class="panel-close" aria-label="Close Recognition">Close <span aria-hidden="true">×</span></button></div>
+          <h2 id="title-recognition">Moments worth <em>celebrating.</em></h2>
+          <div class="recognition-grid"><div class="honor"><span>✳</span><strong>ASM Future Leaders Mentorship Fellowship</strong><small>American Society for Microbiology · 2026–2028</small></div><div class="honor"><span>✷</span><strong>First Place · Oral Presentation</strong><small>Jakobsen Graduate Research Showcase · 2026</small></div><div class="honor"><span>✦</span><strong>CAMDA AMR Challenge recognition</strong><small>Top-two placements on three 2026 leaderboards</small></div><div class="honor"><span>✺</span><strong>Outstanding Grant Committee Member</strong><small>Graduate & Professional Student Government · 2025–2026</small></div><div class="honor"><span>✧</span><strong>Wefel Memorial Research Award</strong><small>University of Iowa College of Dentistry · 2024</small></div><div class="honor"><span>✳</span><strong>University Graduate Fellowship</strong><small>University of Iowa · 2023–2025</small></div><div class="honor"><span>✷</span><strong>University Gold Medalist</strong><small>MSc Biotechnology · MAKAUT, India</small></div><div class="honor"><span>✦</span><strong>Best Project Award</strong><small>HackBio Metagenomics Internship · 2021</small></div></div>
+        </section>
+
+        <section id="panel-journey" class="detail-panel" data-panel="journey" hidden aria-labelledby="title-journey">
+          <div class="panel-head"><span class="eyebrow">05 / Journey</span><button type="button" class="panel-close" aria-label="Close Journey">Close <span aria-hidden="true">×</span></button></div>
+          <h2 id="title-journey">The path is <em>part of the story.</em></h2>
+          <div class="timeline"><div class="timeline-event"><span>2023 — Present</span><div><h3>PhD candidate · University of Iowa</h3><p>Informatics research in bioinformatics and biomedical machine learning; advisor: Dr. Erliang Zeng.</p></div></div><div class="timeline-event"><span>2022 — 2023</span><div><h3>Senior Biocurator · Elucidata</h3><p>Biomedical and multi-omics data curation for FAIR, AI-ready research datasets.</p></div></div><div class="timeline-event"><span>2019 — 2021</span><div><h3>MSc Biotechnology · GNIPST</h3><p>University gold medalist. Research training in computational biology and RNA-focused therapeutic questions.</p></div></div><div class="timeline-event"><span>Leadership</span><div><h3>Community & service</h3><p>Informatics Graduate Student Senator, 1stGen@Iowa graduate/professional representative, and Graduate Student Employment Committee representative.</p></div></div></div>
+        </section>
+
+        <section id="panel-toolkit" class="detail-panel" data-panel="toolkit" hidden aria-labelledby="title-toolkit">
+          <div class="panel-head"><span class="eyebrow">06 / Toolkit</span><button type="button" class="panel-close" aria-label="Close Toolkit">Close <span aria-hidden="true">×</span></button></div>
+          <h2 id="title-toolkit">Different tools. <em>One curious mindset.</em></h2>
+          <div class="toolkit-grid"><div class="toolbox"><span>⌘</span><h3>Programming & infrastructure</h3><p>Python · R · Bash · SQL · Git · Linux · HPC</p></div><div class="toolbox"><span>✧</span><h3>Machine learning & NLP</h3><p>scikit-learn · XGBoost · SVM · Ensemble learning · Biomedical language models</p></div><div class="toolbox"><span>✳</span><h3>Bioinformatics & genomics</h3><p>Whole-genome sequencing · Metagenomics · Kraken2 · HUMAnN3 · phyloseq</p></div><div class="toolbox"><span>◈</span><h3>Research practice</h3><p>Reproducible workflows · Benchmarking · Statistical evaluation · Scientific communication</p></div></div>
+        </section>
+
+        <section id="panel-hobbies" class="detail-panel" data-panel="hobbies" hidden aria-labelledby="title-hobbies">
+          <div class="panel-head"><span class="eyebrow">07 / Beyond the lab</span><button type="button" class="panel-close" aria-label="Close Beyond the lab">Close <span aria-hidden="true">×</span></button></div>
+          <h2 id="title-hobbies">A life full of <em>little wonders.</em></h2>
+          <p class="panel-lead">Science is a big part of my world, but curiosity has many forms.</p>
+          <div class="hobby-grid">
+            <div class="hobby"><div class="hobby-illustration bird-art" aria-hidden="true"><svg viewBox="0 0 180 150" fill="none"><path d="M42 95C55 58 98 44 122 70C145 94 113 127 79 121C54 117 47 106 42 95Z" fill="#98d7c5"/><path d="M81 92C69 72 47 75 31 86C51 90 63 104 81 92Z" fill="#e1f2ce"/><path d="M115 85L145 93L116 100Z" fill="#efbd88"/><circle cx="106" cy="77" r="4" fill="#24363f"/><path d="M71 120l-4 15m22-15 4 15M49 137h65" stroke="#617e76" stroke-width="3" stroke-linecap="round"/><path d="M46 41c6-10 12-10 18 0M108 34c6-10 12-10 18 0" stroke="#aac5a3" stroke-width="3" stroke-linecap="round"/></svg></div><h3>Birdwatching</h3><p>Finding calm in nature and delight in the little details.</p></div>
+            <div class="hobby"><div class="hobby-illustration dance-art" aria-hidden="true"><svg viewBox="0 0 180 150" fill="none"><circle cx="86" cy="38" r="14" fill="#f1c4d4"/><path d="M86 54l-9 40-29 21m38-61 20 39 28 25M80 66L49 76M94 62l38-17" stroke="#e2b2cd" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/><path d="M78 75Q91 96 109 83L122 115Q83 128 59 111Z" fill="#b6c9f2"/><path d="M34 45l5 10 10 5-10 5-5 10-5-10-10-5 10-5zM139 21l4 9 9 4-9 4-4 9-4-9-9-4 9-4z" fill="#f3d9a1"/></svg></div><h3>Dancing</h3><p>Movement, rhythm, and a little bit of joy.</p></div>
+            <div class="hobby"><div class="hobby-illustration music-art" aria-hidden="true"><svg viewBox="0 0 180 150" fill="none"><path d="M73 101V48l64-13v56" stroke="#a6caee" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/><ellipse cx="56" cy="109" rx="19" ry="12" transform="rotate(-20 56 109)" fill="#a6caee"/><ellipse cx="119" cy="98" rx="19" ry="12" transform="rotate(-20 119 98)" fill="#a6caee"/><path d="M32 46l5 11 11 5-11 5-5 11-5-11-11-5 11-5zM141 111l4 9 9 4-9 4-4 9-4-9-9-4 9-4z" fill="#ffdcaa"/></svg></div><h3>Listening to music</h3><p>Soundtracks for quiet moments, busy days, and everything in between.</p></div>
+          </div>
+        </section>
+
+        <section id="panel-contact" class="detail-panel" data-panel="contact" hidden aria-labelledby="title-contact">
+          <div class="panel-head"><span class="eyebrow">08 / Contact</span><button type="button" class="panel-close" aria-label="Close Contact">Close <span aria-hidden="true">×</span></button></div>
+          <h2 id="title-contact">Let's ask better biological questions <em>through data.</em></h2>
+          <p class="big-copy">Interested in computational biology, reliable biomedical AI, or a research collaboration? I would love to connect.</p>
+          <a class="button primary" href="mailto:priyanka-singh@uiowa.edu">Email me <span aria-hidden="true">↗</span></a>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <aside class="greeter" id="greeter" aria-label="Welcome guide">
+    <div class="greeter-bubble" id="greeter-bubble"><button class="greet-close" type="button" id="greet-close" aria-label="Dismiss welcome message">×</button><p><strong>Hi there! ✨</strong><br>Thank you for visiting my website. Want to know more about me? Click About me!</p><button class="greet-cta" type="button" data-open="about">About me <span aria-hidden="true">↗</span></button></div>
+    <button class="robot-toggle" id="robot-toggle" type="button" aria-label="Toggle welcome guide" aria-expanded="true" aria-controls="greeter-bubble">
+      <svg class="robot" viewBox="0 0 150 178" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="75" cy="167" rx="46" ry="7" fill="#080d16" opacity=".12"/>
+        <path d="M75 29V17" stroke="#6abdb6" stroke-width="5" stroke-linecap="round"/><circle cx="75" cy="14" r="7" fill="#f3b8cd"/>
+        <rect x="22" y="27" width="106" height="82" rx="39" fill="#f7faf8" stroke="#80bdb7" stroke-width="3"/>
+        <rect x="40" y="56" width="70" height="30" rx="15" fill="#28454e"/>
+        <circle cx="60" cy="70" r="5" fill="#b8f2dc"/><circle cx="90" cy="70" r="5" fill="#b8f2dc"/><path d="M67 81q8 6 16 0" stroke="#b8f2dc" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+        <rect x="31" y="105" width="88" height="57" rx="28" fill="#dcefe9" stroke="#80bdb7" stroke-width="3"/>
+        <path d="M36 121Q19 122 18 140" stroke="#dcefe9" stroke-width="18" stroke-linecap="round"/><path class="robot-wave" d="M113 118Q134 108 140 84" stroke="#dcefe9" stroke-width="18" stroke-linecap="round"/>
+        <path d="M75 135c-11-12-24 5 0 17 24-12 11-29 0-17z" fill="#f5b4c7"/><path d="M55 160l-6 9M95 160l6 9" stroke="#80bdb7" stroke-width="7" stroke-linecap="round"/>
+      </svg>
+    </button>
+  </aside>
+
+  <footer><div class="container footer-inner"><span>© <span id="year">2026</span> Priyanka Singh · Made with curiosity ✳</span><span>University of Iowa · Iowa City</span><button type="button" class="back-top" id="back-top">Back to top ↑</button></div></footer>
+</body>
+</html>
