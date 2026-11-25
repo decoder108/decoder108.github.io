@@ -10,11 +10,11 @@ This website is a personal space where I share my scientific journey, research i
 
 ### ✨ Website Features
 
-- **Interactive portfolio** — Explore different sections through clickable, expandable panels.
-- **Virtual companion** — A friendly animated robot to help visitors navigate and learn more about me.
-- **Personalized design** — Smooth animations, dynamic typography, and playful scientific elements.
-- **Light & dark modes** — Choose your preferred viewing experience.
-- **Responsive layout** — Designed for desktop, tablet, and mobile devices.
+- **Interactive portfolio** - Explore different sections through clickable, expandable panels.
+- **Virtual companion** - A friendly animated robot to help visitors navigate and learn more about me.
+- **Personalized design** - Smooth animations, dynamic typography, and playful scientific elements.
+- **Light & dark modes** - Choose your preferred viewing experience.
+- **Responsive layout** - Designed for desktop, tablet, and mobile devices.
 
 ### 🛠️ Built With
 
