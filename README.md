@@ -1,4 +1,4 @@
-# Priyanka Singh — Interactive Research Portfolio (V4)
+# Priyanka Singh — Interactive Research Portfolio
 
 A lightweight, responsive GitHub Pages website made with HTML, CSS, and vanilla JavaScript. It presents public-facing research themes without disclosing unpublished project details.
 
