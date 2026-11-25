@@ -163,41 +163,41 @@
   const answerRules = [
     {
       match: /^(hi|hey|hello|good morning|good evening)[!. ]*$/i,
-      answer: 'Hello! 👋 Welcome to my portfolio. Ask about my research, background, scientific works, or how to connect.'
+      answer: 'Hi! 👋 Thanks for visiting my website. You can ask me about my background, research interests, scientific works, or how to connect.'
     },
     {
       match: /about|who (are|is)|background|education|degree|journey/i,
-      answer: 'Priyanka is a PhD candidate in Informatics at the University of Iowa, working at the intersection of machine learning, bioinformatics, and biomedical research.',
+      answer: 'Hi, my name is Priyanka Singh! I’m a PhD candidate in Informatics at the University of Iowa. I develop machine-learning and bioinformatics approaches to understand antimicrobial resistance, microbiomes, and clinical data.',
       panel: 'about'
     },
     {
       match: /research|amr|antimicrobial|genom|microbiome|clinical|AI|machine.learning|project/i,
-      answer: 'Her research explores antimicrobial resistance, microbiome informatics, and clinical data through computational and machine-learning approaches. Ongoing projects are described at a high level.',
+      answer: 'I explore questions in antimicrobial resistance, microbiomes, and clinical informatics using computational approaches. I keep ongoing research details high-level here.',
       panel: 'research'
     },
     {
       match: /publication|paper|scientific|work|talk|presentation|scholar/i,
-      answer: 'You can browse selected publications, preprints, and talks in Scientific works.',
+      answer: 'You can explore my selected publications, preprints, and talks in Scientific works.',
       panel: 'works'
     },
     {
       match: /award|fellowship|achievement|recognition/i,
-      answer: 'Selected awards and recognitions are listed in Recognition.',
+      answer: 'I share selected milestones, awards, and fellowships in Recognition.',
       panel: 'recognition'
     },
     {
       match: /skill|python|code|tool|programming|R language/i,
-      answer: 'Her toolkit includes Python, R, machine learning, bioinformatics analysis, Linux, and reproducible research workflows.',
+      answer: 'I work with Python, R, machine learning, bioinformatics tools, Linux, and reproducible research workflows.',
       panel: 'toolkit'
     },
     {
       match: /hobb|bird|dance|music|outside|fun/i,
-      answer: 'Outside research, Priyanka enjoys birdwatching, dancing, and listening to music.',
+      answer: 'Outside the lab, I love birdwatching, dancing, and listening to music! 🐦',
       panel: 'hobbies'
     },
     {
       match: /contact|connect|collaborat|email|hire|opportunit|reach/i,
-      answer: 'For research collaborations or professional opportunities, you can email Priyanka at priyanka-singh@uiowa.edu.',
+      answer: 'I would love to connect about computational biology, biomedical AI, or research collaborations. You can email me at priyanka-singh@uiowa.edu.',
       panel: 'contact',
       email: true
     }
@@ -255,7 +255,7 @@
     }
 
     appendMessage(
-      'I can help you explore the public sections of this portfolio, but I cannot answer open-ended questions like a live AI. Try asking about research, publications, experience, or contact. For other questions, email Priyanka.',
+      'I can guide you through my public portfolio topics, but this is a prewritten FAQ rather than a live chat. Try asking about my research, publications, or background—or email me for other questions.',
       'bot', 'contact', true
     );
   }
@@ -269,7 +269,7 @@
 
     if (!messages.children.length) {
       appendMessage(
-        'Hi! 👋 Thank you for visiting my website. Want to know more about me? Click About me, or ask a question below.',
+        'Hi! 👋 Thanks for visiting my site! I’m Priyanka. Want to know more about me? Click About me, or ask me a question below.',
         'bot', 'about'
       );
     }
@@ -301,36 +301,44 @@
   });
 
   // ---------------------------------------------------------------------------
-  // 06. Accessible typewriter headline (letter by letter, without HTML injection)
+  // 06. Stable three-line typewriter heading (moderate speed, no reflow)
   // ---------------------------------------------------------------------------
-  const typedIntro = document.getElementById('typed-intro');
-  const typedEmphasis = document.getElementById('typed-emphasis');
+  // Each line is already allocated space in HTML/CSS before any letters appear.
+  // Keep the lines separate so "biology" never jumps to the next line mid-typing.
   const heroTitle = document.getElementById('hero-title');
-  const phraseIntro = 'Making biology ';
-  const phraseEmphasis = 'computable!';
+  const headlineLines = [
+    { element: document.getElementById('typed-making'), text: 'Making' },
+    { element: document.getElementById('typed-biology'), text: 'biology' },
+    { element: document.getElementById('typed-computable'), text: 'computable!' }
+  ];
+  const typingSpeedMs = 135; // Slightly slower than V4's 85 ms per letter.
+
+  /** Reveal the complete heading immediately for reduced-motion users. */
+  function finishHeadline() {
+    headlineLines.forEach(({ element, text }) => { element.textContent = text; });
+    heroTitle.classList.add('typing-done');
+  }
 
   if (reducedMotion.matches) {
-    // Display the complete text immediately when animations are disabled.
-    typedIntro.textContent = phraseIntro;
-    typedEmphasis.textContent = phraseEmphasis;
-    heroTitle.classList.add('typing-done');
+    finishHeadline();
   } else {
-    const fullPhrase = phraseIntro + phraseEmphasis;
-    let typedCharacters = 0;
-    const intervalId = window.setInterval(() => {
-      typedCharacters += 1;
-      typedIntro.textContent = fullPhrase.slice(
-        0, Math.min(typedCharacters, phraseIntro.length)
-      );
-      typedEmphasis.textContent = fullPhrase.slice(
-        phraseIntro.length, typedCharacters
-      );
+    // Step through lines sequentially while retaining their fixed layout slots.
+    let lineIndex = 0;
+    let characterIndex = 0;
+    const typingTimer = window.setInterval(() => {
+      const line = headlineLines[lineIndex];
+      characterIndex += 1;
+      line.element.textContent = line.text.slice(0, characterIndex);
 
-      if (typedCharacters >= fullPhrase.length) {
-        window.clearInterval(intervalId);
+      if (characterIndex >= line.text.length) {
+        lineIndex += 1;
+        characterIndex = 0;
+      }
+      if (lineIndex >= headlineLines.length) {
+        window.clearInterval(typingTimer);
         heroTitle.classList.add('typing-done');
       }
-    }, 85);
+    }, typingSpeedMs);
   }
 
   // ---------------------------------------------------------------------------

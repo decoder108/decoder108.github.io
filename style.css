@@ -1591,3 +1591,78 @@ footer {
   }
 }
 
+
+
+/* --------------------------------------------------------------------------
+   V5 — Hero: stable three-line typewriter and original research illustration
+   Each line has a permanent layout slot; newly typed characters cannot push
+   later content onto a different line or move the hero actions below it.
+   -------------------------------------------------------------------------- */
+.type-title {
+  min-height: 0;
+  max-width: none;
+  font-size: clamp(48px, 5.5vw, 84px);
+  line-height: 1.04;
+  letter-spacing: -.052em;
+}
+.type-title .type-line {
+  display: block;
+  min-height: 1.04em;
+  white-space: nowrap;
+}
+.type-title .type-line em {
+  font-style: normal;
+  color: var(--mint);
+}
+/* Keep the animated science art in the hero instead of a portrait. */
+.hero-art {
+  min-width: 0;
+}
+
+/* --------------------------------------------------------------------------
+   V5 — About: small circular headshot that blends into both color themes.
+   The initials remain visible if no photo has been uploaded yet.
+   -------------------------------------------------------------------------- */
+.about-photo-frame {
+  position: relative;
+  width: 124px;
+  height: 124px;
+  margin: 0 0 18px;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 2px solid color-mix(in srgb, var(--mint) 45%, var(--line));
+  background: radial-gradient(circle at 35% 25%, color-mix(in srgb, var(--mint) 20%, var(--surface)), var(--surface));
+  box-shadow: 0 10px 35px var(--shadow);
+}
+.about-photo-frame img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+  z-index: 1;
+}
+.about-photo-frame img[hidden] { display: none; }
+.about-photo-placeholder {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 36px;
+  font-weight: 600;
+  letter-spacing: -.06em;
+  color: var(--mint);
+}
+
+/* Preserve the three lines at phone widths by scaling text, not wrapping. */
+@media (max-width: 720px) {
+  .type-title {
+    min-height: 0;
+    font-size: clamp(43px, 10vw, 65px);
+  }
+}
+@media (max-width: 380px) {
+  .type-title { font-size: 43px; }
+}

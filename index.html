@@ -45,11 +45,16 @@
   </header>
 
   <main id="home">
-    <!-- Hero introduction, animated headline, and round profile picture -->
+    <!-- Hero: fixed three-line typewriter heading and restored science illustration -->
     <section class="hero container" aria-labelledby="hero-title">
       <div class="hero-copy">
         <div class="eyebrow"><span class="pulse" aria-hidden="true"></span> PhD researcher · University of Iowa</div>
-        <h1 id="hero-title" class="type-title" aria-label="Making biology computable!"><span id="typed-intro" aria-hidden="true"></span><em id="typed-emphasis" aria-hidden="true"></em><span class="typing-caret" aria-hidden="true"></span></h1>
+        <!-- Reserve three lines before typing begins to prevent layout shifts. -->
+        <h1 id="hero-title" class="type-title" aria-label="Making biology computable!">
+          <span class="type-line"><span id="typed-making" aria-hidden="true"></span></span>
+          <span class="type-line"><span id="typed-biology" aria-hidden="true"></span></span>
+          <span class="type-line"><em id="typed-computable" aria-hidden="true"></em></span>
+        </h1>
         <p class="lead">Hi, I am Priyanka Singh, a PhD candidate developing machine-learning and bioinformatics approaches to understand antimicrobial resistance, microbiomes, and clinical data.</p>
         <div class="hero-actions">
           <button type="button" class="button primary" data-open="research">Explore my research <span aria-hidden="true">↗</span></button>
@@ -57,15 +62,17 @@
         </div>
         <div class="hero-bottom"><span class="tiny-star" aria-hidden="true">✳</span> Curious about biology. Thoughtful about data.</div>
       </div>
-      <div class="hero-photo-wrap">
-        <div class="portrait-halo" aria-hidden="true"></div>
-        <div class="portrait-frame">
-          <!-- Add your portrait to assets/profile.jpg; the fallback appears until then. -->
-          <img id="profile-photo" src="assets/profile.jpg" alt="Portrait of Priyanka Singh" loading="eager" onerror="this.hidden=true">
-          <div class="portrait-placeholder" aria-hidden="true"><span>PS</span><small>Your photo here</small></div>
-        </div>
-        <span class="portrait-orbit portrait-orbit-a" aria-hidden="true">✳</span>
-        <span class="portrait-orbit portrait-orbit-b" aria-hidden="true">✦</span>
+      <div class="hero-art" aria-hidden="true">
+        <div class="orbit orbit-1"></div><div class="orbit orbit-2"></div><div class="orbit orbit-3"></div>
+        <svg viewBox="0 0 470 490" class="science-art" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs><linearGradient id="geneGrad" x1="0" x2="1"><stop stop-color="#9de8c6"/><stop offset="1" stop-color="#a5c0fa"/></linearGradient></defs>
+          <g class="helix" stroke="url(#geneGrad)" stroke-width="7" stroke-linecap="round"><path d="M180 70 C360 130 115 200 310 265 S120 376 287 423"/><path d="M300 70 C125 130 360 200 180 265 S348 376 192 423"/></g>
+          <g stroke="#a2cec6" stroke-width="3" opacity=".7"><path d="M207 83h70M222 117h37M207 151h70M195 187h97M208 226h70M204 265h80M197 303h94M218 343h51M204 383h72M213 415h57"/></g>
+          <g class="float-a"><ellipse cx="95" cy="130" rx="48" ry="32" fill="#b4e8d2" transform="rotate(-26 95 130)"/><path d="M47 106l-17 -10M140 149l18 8M94 91l-3 -18M101 165l-1 18" stroke="#b4e8d2" stroke-width="6" stroke-linecap="round"/><circle cx="80" cy="125" r="3" fill="#275f5c"/><circle cx="106" cy="137" r="3" fill="#275f5c"/></g>
+          <g class="float-b" stroke="#f5bbd0" stroke-width="3"><path d="M354 116l53 38-25 58-62-29z" fill="#353851"/><circle cx="354" cy="116" r="8" fill="#f5bbd0"/><circle cx="407" cy="154" r="8" fill="#f5bbd0"/><circle cx="382" cy="212" r="8" fill="#f5bbd0"/><circle cx="320" cy="183" r="8" fill="#f5bbd0"/></g>
+          <path d="M90 325l7 16 16 7-16 7-7 16-7-16-16-7 16-7z" fill="#ffdeaa"/><path d="M405 311l5 12 12 5-12 5-5 12-5-12-12-5 12-5z" fill="#ffdeaa"/>
+        </svg>
+        <span class="floating-tag tag1">bioinformatics</span><span class="floating-tag tag2">machine learning</span><span class="floating-tag tag3">curiosity ✦</span>
       </div>
     </section>
 
@@ -89,7 +96,13 @@
         <section id="panel-about" class="detail-panel" data-panel="about" hidden aria-labelledby="title-about">
           <div class="panel-head"><span class="eyebrow">01 / About me</span><button type="button" class="panel-close" aria-label="Close About me">Close <span aria-hidden="true">×</span></button></div>
           <h2 id="title-about">A curious mind at the intersection of <em>biology and computation.</em></h2>
-          <div class="two-col"><div><p class="big-copy">I am a PhD candidate in Informatics at the University of Iowa, working with Dr. Erliang Zeng in the College of Dentistry. I care about making complex biological information more useful, understandable, and trustworthy.</p><p>Before my doctoral research, I worked as a Senior Biocurator at Elucidata. My training began in biotechnology, where I earned a master's degree and graduated as a university gold medalist.</p><p>I'm especially drawn to research that bridges disciplines, invites collaboration, and turns carefully analyzed data into questions worth asking next.</p></div><div class="side-note"><span class="note-icon">✺</span><h3>What motivates me</h3><p>Thoughtful computational tools should help researchers see biological systems more clearly—not just generate predictions.</p><div class="mini-tags"><span>AI for health</span><span>Microbiomes</span><span>Genomics</span><span>Collaboration</span></div></div></div>
+          <div class="two-col"><div><p class="big-copy">I am a PhD candidate in Informatics at the University of Iowa, working with Dr. Erliang Zeng in the College of Dentistry. I care about making complex biological information more useful, understandable, and trustworthy.</p><p>Before my doctoral research, I worked as a Senior Biocurator at Elucidata. My training began in biotechnology, where I earned a master's degree and graduated as a university gold medalist.</p><p>I'm especially drawn to research that bridges disciplines, invites collaboration, and turns carefully analyzed data into questions worth asking next.</p></div><div class="side-note">
+            <!-- Optional headshot: place assets/profile.jpg in the repository. -->
+            <div class="about-photo-frame">
+              <img src="assets/profile.jpg" alt="Priyanka Singh" loading="lazy" onerror="this.hidden=true">
+              <span class="about-photo-placeholder" aria-hidden="true">PS</span>
+            </div>
+            <span class="note-icon">✺</span><h3>What motivates me</h3><p>Thoughtful computational tools should help researchers see biological systems more clearly—not just generate predictions.</p><div class="mini-tags"><span>AI for health</span><span>Microbiomes</span><span>Genomics</span><span>Collaboration</span></div></div></div>
         </section>
 
         <!-- Research themes: intentionally high-level to protect ongoing work -->
@@ -167,10 +180,10 @@
     </section>
   </main>
 
-  <!-- Robot chat: visitor-activated, prewritten FAQ only -->
+  <!-- Robot chat: visitor-activated, first-person prewritten FAQ only -->
   <aside class="greeter is-quiet" id="greeter" aria-label="Portfolio guide">
-    <section class="chat-window" id="chat-window" aria-label="Chat with the portfolio guide" hidden>
-      <header class="chat-heading"><div><strong>Ask my portfolio ✳</strong><small>Guided FAQ · not a live AI</small></div><button id="chat-close" type="button" aria-label="Close chat">×</button></header>
+    <section class="chat-window" id="chat-window" aria-label="Chat with Priyanka’s portfolio guide" hidden>
+      <header class="chat-heading"><div><strong>Ask Priyanka ✳</strong><small>Guided FAQ · not a live AI</small></div><button id="chat-close" type="button" aria-label="Close chat">×</button></header>
       <div class="chat-messages" id="chat-messages" role="log" aria-live="polite" aria-relevant="additions text"></div>
       <div class="chat-suggestions" id="chat-suggestions" aria-label="Suggested questions">
         <button type="button" data-question="Tell me about Priyanka">About me</button>
@@ -179,7 +192,7 @@
         <button type="button" data-question="How can I connect?">Connect</button>
       </div>
       <form class="chat-form" id="chat-form"><label for="chat-input" class="sr-only">Ask a question</label><input id="chat-input" type="text" maxlength="200" placeholder="Ask a question…" autocomplete="off" required><button type="submit" aria-label="Send question">Send ↗</button></form>
-      <p class="chat-disclaimer">This guide responds to common portfolio questions; it does not send messages to Priyanka or collect your chat.</p>
+      <p class="chat-disclaimer">Prewritten responses in Priyanka’s voice. This is not a live conversation; questions are not sent or stored.</p>
     </section>
     <button class="robot-toggle" id="robot-toggle" type="button" aria-label="Open portfolio chat" aria-expanded="false" aria-controls="chat-window" title="Ask my portfolio">
 <svg class="robot" viewBox="0 0 150 178" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
